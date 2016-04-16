@@ -6,7 +6,7 @@ var connect = require('gulp-connect-php');
 gulp.task('watch', function(){
 	connect.server({
 		port:8001,
-		base:'./app/',
+		base:'./app/wordpress/',
 		bin: 'C:/php/php.exe',
 		ini: 'C:/php/php.ini'
 	},function(){

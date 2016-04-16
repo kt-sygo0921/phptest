@@ -8,5 +8,5 @@ gulp.task('sass', function(){
 		outputStyle:'expanded'
 	}))
 	.pipe(autoprefixer())
-	.pipe(gulp.dest('./app/css'))
+	.pipe(gulp.dest('./app/wordpress/css'))
 });
