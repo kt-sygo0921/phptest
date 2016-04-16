@@ -7,8 +7,8 @@ gulp.task('watch', function(){
 	connect.server({
 		port:8001,
 		base:'./app/',
-		bin: 'C:/xampp/php/php.exe',
-		ini: 'C:/xampp/php/php.ini'
+		bin: 'C:/php/php.exe',
+		ini: 'C:/php/php.ini'
 	},function(){
 		browserSync({
 			baseDir:'./app/',
