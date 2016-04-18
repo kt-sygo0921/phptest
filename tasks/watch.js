@@ -11,7 +11,7 @@ gulp.task('watch', function(){
 		var phpini = 'C:/php/php.ini';
 		console.log('windowsだよ');
 	}else {
-		var phpbin ='';
+		var phpbin ='/usr/local/opt/php70/bin/php';
 		var phpini = '';
 		console.log('macだよ');
 	}
