@@ -4,6 +4,14 @@ var runSequance = require('run-sequence');
 var connect = require('gulp-connect-php');
 
 gulp.task('watch', function(){
+	var ostype = os.type().toString();
+	if(ostype.match('Windows')) {
+		var phpbin = 'C:/php/php.exe';
+		var phpini = 'C:/php/php.ini';
+	}else {
+		var phpbin ='';
+		var phpini = ''
+	}
 	connect.server({
 		port:8001,
 		base:'./app/wordpress/',
