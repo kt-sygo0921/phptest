@@ -2,21 +2,24 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync');
 var runSequance = require('run-sequence');
 var connect = require('gulp-connect-php');
+var os = require('os');
 
 gulp.task('watch', function(){
 	var ostype = os.type().toString();
 	if(ostype.match('Windows')) {
 		var phpbin = 'C:/php/php.exe';
 		var phpini = 'C:/php/php.ini';
+		console.log('windowsだよ');
 	}else {
 		var phpbin ='';
-		var phpini = ''
+		var phpini = '';
+		console.log('macだよ');
 	}
 	connect.server({
 		port:8001,
 		base:'./app/wordpress/',
-		bin: 'C:/php/php.exe',
-		ini: 'C:/php/php.ini'
+		bin: phpbin,
+		ini: phpini
 	},function(){
 		browserSync({
 			baseDir:'./app/',
